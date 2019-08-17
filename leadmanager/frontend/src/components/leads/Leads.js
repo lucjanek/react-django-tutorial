@@ -2,9 +2,12 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getLeads, deleteLead } from "../../actions/leads";
+
 export class Leads extends Component {
-  static PropTypes = {
-    leads: PropTypes.array.isRequired
+  static propTypes = {
+    leads: PropTypes.array.isRequired,
+    getLeads: PropTypes.func.isRequired,
+    deleteLead: PropTypes.func.isRequired
   };
 
   componentDidMount() {
